@@ -1,7 +1,7 @@
 import { FiStar } from "react-icons/fi";
 import Image from "next/image";
 import Info from "@/app/components/Info";
-import { Suspense } from "react";
+
 import BuyButton from "@/app/components/BuyButton";
 import BackButton from "@/app/components/BackButton";
 import Nav from "@/app/components/Header";
@@ -11,9 +11,7 @@ export default async function detalje({ params }) {
   const response = await fetch(`https://dummyjson.com/products/${id}`);
   const product = await response.json();
   return (
-    <Suspense>
-      <div className="mx-auto min-h-screen max-w-[390px]">
-
+    <div className="mx-auto min-h-screen max-w-[390px]">
       <Nav />
       <div className="grid px-5">
         <Image
@@ -56,7 +54,6 @@ export default async function detalje({ params }) {
       <div className="flex justify-center">
         <BuyButton price={product.price} />
       </div>
-      </div>
-    </Suspense>
+    </div>
   );
 }
