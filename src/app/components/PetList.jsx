@@ -12,7 +12,7 @@ const PetList = ({ category }) => {
 };
 
 const FetchProduct = async ({ category }) => {
-
+  "use server";
   const url = category
     ? `https://dummyjson.com/products/category/${category}`
     : "https://dummyjson.com/products";

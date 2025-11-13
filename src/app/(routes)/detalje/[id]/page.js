@@ -7,9 +7,11 @@ import BackButton from "@/app/components/BackButton";
 import Nav from "@/app/components/Header";
 
 export default function Detalje({ params }) {
-  <Suspense>
-    <DetaljeContainer params={params} />
-  </Suspense>;
+  return (
+    <Suspense>
+      <DetaljeContainer params={params} />;
+    </Suspense>
+  );
 }
 
 async function DetaljeContainer({ params }) {
