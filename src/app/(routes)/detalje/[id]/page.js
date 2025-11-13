@@ -1,12 +1,18 @@
 import { FiStar } from "react-icons/fi";
 import Image from "next/image";
 import Info from "@/app/components/Info";
-
+import { Suspense } from "react";
 import BuyButton from "@/app/components/BuyButton";
 import BackButton from "@/app/components/BackButton";
 import Nav from "@/app/components/Header";
 
-export default async function detalje({ params }) {
+export default function Detalje({ params }) {
+  <Suspense>
+    <DetaljeContainer params={params} />
+  </Suspense>;
+}
+
+async function DetaljeContainer({ params }) {
   const { id } = await params;
   const response = await fetch(`https://dummyjson.com/products/${id}`);
   const product = await response.json();
