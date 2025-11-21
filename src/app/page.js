@@ -4,6 +4,7 @@ import { FiHome, FiStar, FiMessageCircle, FiUser } from "react-icons/fi";
 import Header from "./components/Header";
 import { Suspense } from "react";
 
+
 export default function Home({ searchParams }) {
   return (
     <div className="mx-auto min-h-screen max-w-[390px]">
