@@ -21,8 +21,8 @@ const FetchProduct = async ({ category }) => {
   const { products } = await response.json();
   return products.map((product) => (
     <Link href={`/detalje/${product.id}`} key={product.id}>
-      <div className="hover:bg-button/30 relative grid h-auto cursor-pointer rounded-2xl shadow-md">
-        <Favorite />
+    <div className="hover:bg-button/30 relative grid h-auto cursor-pointer rounded-2xl shadow-md">
+        <Favorite id={product.id}/>
         <div className="flex flex-col">
           <Image
             loading="eager"
